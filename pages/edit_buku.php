@@ -37,7 +37,7 @@ $conn->close();
     Tanggal Terbit: <input type="date" name="tanggal_terbit" value="<?php echo $row['tanggal_terbit']; ?>"><br>
     Bahasa: <input type="text" name="bahasa" value="<?php echo $row['bahasa']; ?>"><br>
     Deskripsi: <textarea name="deskripsi"><?php echo $row['deskripsi']; ?></textarea><br>
-    ID Kategori: 
+    Kategori: 
     <select name="id_kategori">
         <?php
         while($kategori_row = $kategori_result->fetch_assoc()) {

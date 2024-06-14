@@ -32,7 +32,7 @@ if (!isset($_SESSION['id_pengguna'])) {
     </div>
     <!-- akhir navbar -->
     <h1>Halo, <?php echo htmlspecialchars($_SESSION['nama_pengguna'], ENT_QUOTES); ?></h1>
-    <p>Ini adalah dashboard.</p>
+    <p>Ini adalah dashboard user.</p>
 </body>
 
 </html>

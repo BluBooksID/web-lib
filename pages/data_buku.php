@@ -125,7 +125,7 @@ $result = $conn->query($sql);
     Tanggal Terbit: <input type="date" name="tanggal_terbit"><br>
     Bahasa: <input type="text" name="bahasa"><br>
     Deskripsi: <textarea name="deskripsi"></textarea><br>
-    ID Kategori: 
+    Kategori: 
     <select name="id_kategori">
         <?php
         while($row = $kategori_result->fetch_assoc()) {
