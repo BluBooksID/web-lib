@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['id_pengguna'])) {
+if (!isset($_SESSION['id_admin']) || !isset($_SESSION['nama_admin'])) {
     header("Location: login.php");
     exit();
 }
@@ -20,10 +20,10 @@ if (!isset($_SESSION['id_pengguna'])) {
     <div>
         <tr>
             <td>
-                <a href="">buku</a>
+                <a href="data_buku.php">data buku</a>
             </td>
             <td>
-                <a href="">pinjaman</a>
+                <a href="">data pinjaman</a>
             </td>
             <td>
                 <a href="logout.php">logout</a>
@@ -31,7 +31,7 @@ if (!isset($_SESSION['id_pengguna'])) {
         </tr>
     </div>
     <!-- akhir navbar -->
-    <h1>Halo, <?php echo htmlspecialchars($_SESSION['nama_pengguna'], ENT_QUOTES); ?></h1>
+    <h1>Halo, <?php echo htmlspecialchars($_SESSION['nama_admin'], ENT_QUOTES); ?></h1>
     <p>Ini adalah dashboard.</p>
 </body>
 

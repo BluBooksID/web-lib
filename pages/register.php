@@ -5,6 +5,7 @@ include '../db/koneksi.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $NIM = $_POST['NIM'];
     $nama_pengguna = $_POST['nama_pengguna'];
+    $alamat = $_POST['alamat'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -18,6 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (empty($nama_pengguna)) {
         $errors[] = "Nama harus di isi.";
+    }
+    if (empty($alamat)) {
+        $errors[] = "Mohon untuk mengisi alamat.";
     }
     if (empty($email)) {
         $errors[] = "Email harus di isi.";
@@ -50,12 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $email_check->close();
 
-
     // jika tidak error lanjut input ke db
     if (empty($errors)) {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $db = $conn->prepare("INSERT INTO pengguna (email, password, NIM, nama_pengguna, jenis_kelamin, alamat) VALUES (?, ?, ?, ?, ?, ?)");
-        $alamat = "";
 
         $db->bind_param("ssssss", $email, $hashed_password, $NIM, $nama_pengguna, $jenis_kelamin, $alamat);
 
@@ -100,6 +102,10 @@ $conn->close();
 
             <div>
                 <input id="nama_pengguna" type="text" name="nama_pengguna" value="" required autocomplete="nama_pengguna" autofocus placeholder="Nama">
+            </div>
+
+            <div>
+                <input id="alamat" type="text" name="alamat" value="" required autocomplete="alamat" autofocus placeholder="Alamat">
             </div>
 
             <div>

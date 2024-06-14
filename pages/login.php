@@ -1,14 +1,14 @@
 <?php
 session_start();
-include '../db/koneksi.php';
+include '../db/koneksi.php'; // Pastikan path file koneksi.php sudah benar
+
+$errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $credential = $_POST['credential'];
     $password = $_POST['password'];
 
-    // bila error
-    $errors = [];
-
+    // Validasi input kosong
     if (empty($credential)) {
         $errors[] = "NIM atau email harus di isi.";
     }
@@ -17,35 +17,94 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
-        // menentukan apakah login menggunakan NIM atau email
+        // Tentukan apakah login menggunakan NIM atau email untuk pengguna biasa
         if (filter_var($credential, FILTER_VALIDATE_EMAIL)) {
-            $db = $conn->prepare("SELECT id_pengguna, password, nama_pengguna FROM pengguna WHERE email = ?");
+            $query_user = "SELECT id_pengguna, password, nama_pengguna FROM pengguna WHERE email = ?";
         } else {
-            $db = $conn->prepare("SELECT id_pengguna, password, nama_pengguna FROM pengguna WHERE NIM = ?");
+            $query_user = "SELECT id_pengguna, password, nama_pengguna FROM pengguna WHERE NIM = ?";
         }
 
-        $db->bind_param("s", $credential);
-        $db->execute();
-        $db->store_result();
+        // Prepare statement untuk pengguna biasa
+        $stmt_user = $conn->prepare($query_user);
+        if ($stmt_user) {
+            // Bind parameter untuk pengguna biasa
+            $stmt_user->bind_param("s", $credential);
 
-        if ($db->num_rows > 0) {
-            $db->bind_result($id_pengguna, $hashed_password, $nama_pengguna);
-            $db->fetch();
+            // Execute statement untuk pengguna biasa
+            $stmt_user->execute();
+            $stmt_user->store_result();
 
-            if (password_verify($password, $hashed_password)) {
-                $_SESSION['id_pengguna'] = $id_pengguna;
-                $_SESSION['nama_pengguna'] = $nama_pengguna;
-                header("Location: dashboard.php");
-                exit();
+            // Check jika pengguna biasa ditemukan
+            if ($stmt_user->num_rows > 0) {
+                // Bind result variables untuk pengguna biasa
+                $stmt_user->bind_result($id_pengguna, $hashed_password, $nama_pengguna);
+                $stmt_user->fetch();
+
+                // Verify password untuk pengguna biasa
+                if (password_verify($password, $hashed_password)) {
+                    // Set session variables untuk pengguna biasa
+                    $_SESSION['id_pengguna'] = $id_pengguna;
+                    $_SESSION['nama_pengguna'] = $nama_pengguna;
+
+                    // Redirect ke dashboard pengguna
+                    header("Location: dashboard.php");
+                    exit();
+                } else {
+                    $errors[] = "Password salah.";
+                }
             } else {
-                $errors[] = "Password salah.";
+                $errors[] = "NIM atau email tidak ditemukan.";
             }
+
+            // Close statement untuk pengguna biasa
+            $stmt_user->close();
         } else {
-            $errors[] = "NIM atau email tidak ditemukan.";
+            $errors[] = "Query preparation error untuk pengguna: " . $conn->error;
         }
-        $db->close();
+
+        // Tentukan apakah login menggunakan email untuk admin
+        $query_admin = "SELECT id_admin, password, nama FROM admin WHERE email = ?";
+
+        // Prepare statement untuk admin
+        $stmt_admin = $conn->prepare($query_admin);
+        if ($stmt_admin) {
+            // Bind parameter untuk admin
+            $stmt_admin->bind_param("s", $credential);
+
+            // Execute statement untuk admin
+            $stmt_admin->execute();
+            $stmt_admin->store_result();
+
+            // Check jika admin ditemukan
+            if ($stmt_admin->num_rows > 0) {
+                // Bind result variables untuk admin
+                $stmt_admin->bind_result($id_admin, $hashed_password, $nama);
+                $stmt_admin->fetch();
+
+                // Verify password untuk admin
+                if (password_verify($password, $hashed_password)) {
+                    // Set session variables untuk admin
+                    $_SESSION['id_admin'] = $id_admin;
+                    $_SESSION['nama_admin'] = $nama;
+
+                    // Redirect ke dashboard admin
+                    header("Location: admin_dashboard.php");
+                    exit();
+                } else {
+                    $errors[] = "Password salah.";
+                }
+            } else {
+                $errors[] = "Email tidak ditemukan.";
+            }
+
+            // Close statement untuk admin
+            $stmt_admin->close();
+        } else {
+            $errors[] = "Query preparation error untuk admin: " . $conn->error;
+        }
     }
 
+    // Close connection
     $conn->close();
 }
 ?>

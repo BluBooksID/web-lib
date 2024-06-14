@@ -8,3 +8,5 @@ $db = "db_blubooks";
 
 
 $conn = mysqli_connect($host, $user, $pass, $db);
+
+?>
