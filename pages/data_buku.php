@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Handle Delete
+// Data Delete
 if (isset($_GET['delete'])) {
     $id_buku = $_GET['delete'];
     $sql = "DELETE FROM buku WHERE id_buku=$id_buku";
@@ -63,81 +63,84 @@ if (isset($_GET['delete'])) {
     }
 }
 
-// Retrieve Data
-$sql = "SELECT * FROM buku";
+// Cari Data
+$sql = "SELECT buku.*, kategori.nama_kategori FROM buku LEFT JOIN kategori ON buku.id_kategori = kategori.id_kategori";
 $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Data Buku</title>
 </head>
+
 <body>
 
-<h2>Data Buku</h2>
+    <h2>Data Buku</h2>
 
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Cover</th>
-        <th>Nama Buku</th>
-        <th>Author Buku</th>
-        <th>Tanggal Terbit</th>
-        <th>Bahasa</th>
-        <th>Deskripsi</th>
-        <th>ID Kategori</th>
-        <th>Stok</th>
-        <th>Aksi</th>
-    </tr>
-    <?php
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . $row["id_buku"] . "</td>";
-            echo "<td><img src='../" . $row["cover"] . "' width='50' height='50'></td>"; // Path disesuaikan
-            echo "<td>" . $row["nama_buku"] . "</td>";
-            echo "<td>" . $row["author_buku"] . "</td>";
-            echo "<td>" . $row["tanggal_terbit"] . "</td>";
-            echo "<td>" . $row["bahasa"] . "</td>";
-            echo "<td>" . $row["deskripsi"] . "</td>";
-            echo "<td>" . $row["id_kategori"] . "</td>";
-            echo "<td>" . $row["stok"] . "</td>";
-            echo "<td>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Cover</th>
+            <th>Nama Buku</th>
+            <th>Author Buku</th>
+            <th>Tanggal Terbit</th>
+            <th>Bahasa</th>
+            <th>Deskripsi</th>
+            <th>Kategori</th>
+            <th>Stok</th>
+            <th>Aksi</th>
+        </tr>
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["id_buku"] . "</td>";
+                echo "<td><img src='../" . $row["cover"] . "' width='50' height='50'></td>"; // Path disesuaikan
+                echo "<td>" . $row["nama_buku"] . "</td>";
+                echo "<td>" . $row["author_buku"] . "</td>";
+                echo "<td>" . $row["tanggal_terbit"] . "</td>";
+                echo "<td>" . $row["bahasa"] . "</td>";
+                echo "<td>" . $row["deskripsi"] . "</td>";
+                echo "<td>" . $row["nama_kategori"] . "</td>";
+                echo "<td>" . $row["stok"] . "</td>";
+                echo "<td>
                     <a href='edit_buku.php?id_buku=" . $row["id_buku"] . "'>Edit</a> | 
                     <a href='data_buku.php?delete=" . $row["id_buku"] . "' onclick=\"return confirm('Are you sure?')\">Delete</a>
                   </td>";
-            echo "</tr>";
-        }
-    } else {
-        echo "<tr><td colspan='10'>0 results</td></tr>";
-    }
-    ?>
-</table>
-
-<h2>Tambah Buku</h2>
-
-<form method="post" action="data_buku.php" enctype="multipart/form-data">
-    <input type="hidden" name="id_buku" value="<?php echo isset($_GET['id_buku']) ? $_GET['id_buku'] : ''; ?>">
-    Cover: <input type="file" name="cover"><br>
-    Nama Buku: <input type="text" name="nama_buku"><br>
-    Author Buku: <input type="text" name="author_buku"><br>
-    Tanggal Terbit: <input type="date" name="tanggal_terbit"><br>
-    Bahasa: <input type="text" name="bahasa"><br>
-    Deskripsi: <textarea name="deskripsi"></textarea><br>
-    Kategori: 
-    <select name="id_kategori">
-        <?php
-        while($row = $kategori_result->fetch_assoc()) {
-            echo "<option value='" . $row['id_kategori'] . "'>" . $row['nama_kategori'] . "</option>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='10'>0 results</td></tr>";
         }
         ?>
-    </select><br>
-    Stok: <input type="number" name="stok"><br>
-    <input type="submit" value="Save">
-</form>
+    </table>
+
+    <h2>Tambah Buku</h2>
+
+    <form method="post" action="data_buku.php" enctype="multipart/form-data">
+        <input type="hidden" name="id_buku" value="<?php echo isset($_GET['id_buku']) ? $_GET['id_buku'] : ''; ?>">
+        Cover: <input type="file" name="cover"><br>
+        Nama Buku: <input type="text" name="nama_buku"><br>
+        Author Buku: <input type="text" name="author_buku"><br>
+        Tanggal Terbit: <input type="date" name="tanggal_terbit"><br>
+        Bahasa: <input type="text" name="bahasa"><br>
+        Deskripsi: <textarea name="deskripsi"></textarea><br>
+        Kategori:
+        <select name="id_kategori">
+            <?php
+            while ($row = $kategori_result->fetch_assoc()) {
+                echo "<option value='" . $row['id_kategori'] . "'>" . $row['nama_kategori'] . "</option>";
+            }
+            ?>
+        </select><br>
+        Stok: <input type="number" name="stok"><br>
+        <input type="submit" value="Save">
+    </form>
 
 </body>
+
 </html>
 
 <?php
