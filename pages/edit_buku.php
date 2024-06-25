@@ -48,6 +48,7 @@ $conn->close();
     </select><br>
     Stok: <input type="number" name="stok" value="<?php echo $row['stok']; ?>"><br>
     <input type="submit" value="Save">
+    <a href="data_buku.php">Cancel</a>
 </form>
 
 </body>

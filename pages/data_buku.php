@@ -137,6 +137,7 @@ $result = $conn->query($sql);
         </select><br>
         Stok: <input type="number" name="stok"><br>
         <input type="submit" value="Save">
+        <a href="admin_dashboard.php">Kembali Ke Dashboard</a>
     </form>
 
 </body>
