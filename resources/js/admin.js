@@ -2,7 +2,7 @@
 const password = "admin";
 
 function promptForPassword() {
-  const input = prompt("Masukan Password:");
+  const input = prompt("Verifikasi Kode Akses:");
 
   if (input !== password) {
     alert("Password Salah!");
