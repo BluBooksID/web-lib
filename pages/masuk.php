@@ -68,10 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
                 } else {
                     $errors[] = "Password salah.";
                 }
-            } else {
-                $errors[] = "Email tidak ditemukan.";
-            }
-            $stmt_admin->close();
+            } else
+
+                $stmt_admin->close();
         } else {
             $errors[] = "Query preparation error untuk admin: " . $conn->error;
         }
@@ -156,6 +155,8 @@ $conn->close();
     <title>BluBooks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/web-lib/resources/css/login.css">
+
+
 </head>
 
 <body>
@@ -170,17 +171,17 @@ $conn->close();
                     }
                 }
                 ?>
-                <input type="text" name="NIM" placeholder="NIM *" required />
-                <input type="text" name="nama_pengguna" placeholder="Nama Pengguna *" required />
-                <input type="text" name="alamat" placeholder="Alamat *" required />
+                <input id=NIM type="text" name="NIM" placeholder="NIM *" required />
+                <input id="nama_pengguna" type="text" name="nama_pengguna" placeholder="Nama Pengguna *" required />
+                <input id="alamat" type="text" name="alamat" placeholder="Alamat *" required />
                 <select name="jenis_kelamin" required>
                     <option value="" disabled selected>Jenis Kelamin *</option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
-                <input type="email" name="email" placeholder="Email *" required />
-                <input type="password" name="password" placeholder="Password *" required />
-                <input type="password" name="password_confirmation" placeholder="Confirm Password *" required />
+                <input id="email" type="email" name="email" placeholder="Email *" required />
+                <input id="password" type="password" name="password" placeholder="Password *" required />
+                <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password *" required />
                 <button type="submit" name="register">BUAT AKUN</button>
                 <p class="message">Sudah Daftar? <a href="#">Masuk</a></p>
             </form>
@@ -194,8 +195,8 @@ $conn->close();
                     }
                 }
                 ?>
-                <input type="text" name="credential" placeholder="NIM atau Email" required />
-                <input type="password" name="password" placeholder="Password" required />
+                <input id="credential" type="text" name="credential" value="<?php echo isset($_POST['credential']) ? htmlspecialchars($_POST['credential'], ENT_QUOTES) : ''; ?>" required autocomplete="credential" autofocus placeholder="NIM atau Email">
+                <input id="password" type="password" name="password" placeholder="Password" required />
                 <button type="submit" name="login">LOGIN</button>
                 <p class="message">Belum Daftar? <a href="#">Buat Akun</a></p>
             </form>
