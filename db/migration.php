@@ -35,26 +35,18 @@ $queries = [
         tanggal_terbit DATE NOT NULL,
         bahasa VARCHAR(50) NOT NULL,
         deskripsi TEXT,
-        id_kategori INT,
         stok INT UNSIGNED NOT NULL,
+        id_kategori INT,
         FOREIGN KEY (id_kategori) REFERENCES kategori(id_kategori)
-    )",
-
-    "CREATE TABLE IF NOT EXISTS status (
-        id_status INT PRIMARY KEY AUTO_INCREMENT,
-        id_pengguna INT NOT NULL,
-        id_buku INT NOT NULL,
-        status VARCHAR(50) NOT NULL,
-        FOREIGN KEY (id_pengguna) REFERENCES pengguna(id_pengguna),
-        FOREIGN KEY (id_buku) REFERENCES buku(id_buku)
     )",
 
     "CREATE TABLE IF NOT EXISTS transaksi (
         id_transaksi INT PRIMARY KEY AUTO_INCREMENT,
-        id_pengguna INT NOT NULL,
-        id_buku INT NOT NULL,
         tanggal_pinjam DATE NOT NULL,
         tanggal_pengembalian DATE,
+        status_buku ENUM('dipinjam', 'on_review', 'dikembalikan') DEFAULT 'dipinjam',
+        id_pengguna INT NOT NULL,
+        id_buku INT NOT NULL,
         FOREIGN KEY (id_pengguna) REFERENCES pengguna(id_pengguna),
         FOREIGN KEY (id_buku) REFERENCES buku(id_buku)
     )",
