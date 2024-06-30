@@ -2,30 +2,35 @@
 <html lang="en">
 
 <head>
+    <!-- Set karakter encoding dan viewport untuk responsif -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
 </head>
 
 <body>
+    <!-- Awal php-backend -->
     <?php
-
+    // Sisipkan file koneksi database
     include("db/koneksi.php");
-
     ?>
+    <!-- Akhir php-backend -->
 
-    <!-- awal navbar -->
+
+    <!-- Awal navbar untuk navigasi -->
     <div>
-        <tr>
-            <td>
-                <a href="pages/login.php">login</a>
-            </td>
-            <td>
-                <a href="pages/register.php">register</a>
-            </td>
-        </tr>
+        <table>
+            <tr>
+                <td>
+                    <a href="pages/auth.php">Login / Register</a>
+                </td>
+                <td>
+                    <a href="pages/admin/admin_only.php">Admin Only</a>
+                </td>
+            </tr>
+        </table>
     </div>
-    <!-- akhir navbar -->
+    <!-- Akhir navbar -->
 
 </body>
 
