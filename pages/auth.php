@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
                 if (password_verify($password, $hashed_password)) {
                     $_SESSION['id_pengguna'] = $id_pengguna;
                     $_SESSION['nama_pengguna'] = $nama_pengguna;
-                    header("Location: dashboard.php");
+                    header("Location: user/dashboard.php");
                     exit();
                 } else {
                     $errors[] = "Password salah.";
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
                 if (password_verify($password, $hashed_password)) {
                     $_SESSION['id_admin'] = $id_admin;
                     $_SESSION['nama_admin'] = $nama;
-                    header("Location: admin_dashboard.php");
+                    header("Location: admin/dashboard.php");
                     exit();
                 } else {
                     $errors[] = "Password salah.";
