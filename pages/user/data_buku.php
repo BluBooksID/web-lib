@@ -2,7 +2,10 @@
 <html>
 
 <head>
-    <title>Data Buku</title>
+    <title>List Buku</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,6 +35,27 @@
     ?>
     <!-- Akhir php-backend -->
 
+    <!-- Awal navbar -->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="/web-lib/resources/asset/logo.svg" alt="Logo" width="150" height="35">
+                </div>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-4">
+                    <li><a href="dashboard.php" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="data_buku.php" class="nav-link px-2 text-secondary">List Buku</a></li>
+                    <li><a href="list_pinjam_buku.php" class="nav-link px-2 text-white">Daftar Pinjaman Buku</a></li>
+                </ul>
+
+                <div class="text-end">
+                    <a href="../logout.php" class="btn btn-outline-primary px-4 me-sm-3 fw-bold">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Akhir navbar -->
 
     <h2>Data Buku</h2>
     <table border="1">
@@ -73,6 +97,10 @@
         ?>
     </table>
     <a href="dashboard.php">Kembali ke Dashboard</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
