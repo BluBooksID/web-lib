@@ -71,7 +71,7 @@
     <!-- Akhir navbar -->
 
     <div class="container mt-5">
-        <h1>Daftar Pinjaman Buku</h1>
+        <h1 class="pb-3">Daftar Pinjaman Buku</h1>
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead class="bg-light text-center">

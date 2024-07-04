@@ -141,11 +141,11 @@
                 </div>
                 <div style="display: flex; flex-direction: column;">
                     <?php
-                        echo "<td>
+                    echo "<td>
                         <a href='data_buku.php?borrow=" . $row["id_buku"] . "' onclick=\"return confirm('Anda yakin ingin meminjam buku ini?')\"class='btn btn-primary px-4 fw-bold'>Pinjam Buku</a>
                         </td>";
                     ?>
-                    <p class="lead">Stock tersisa : <?php echo $stok; ?></p>
+                    <p class="lead pt-3">Stock tersisa : <?php echo $stok; ?></p>
                 </div>
             </div>
         </div>
