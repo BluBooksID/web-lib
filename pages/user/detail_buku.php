@@ -140,11 +140,11 @@
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column;">
-                    <form action="../../controllers/UserController.php" method="GET" style="margin-bottom: 10px;">
-                        <input type="hidden" name="borrow" value="<?php echo $id; ?>">
-                        <button type="submit" onclick="return confirm('Anda yakin ingin meminjam buku ini?')"
-                            class="btn btn-primary px-4 fw-bold">Pinjam Buku</button>
-                    </form>
+                    <?php
+                        echo "<td>
+                        <a href='data_buku.php?borrow=" . $row["id_buku"] . "' onclick=\"return confirm('Anda yakin ingin meminjam buku ini?')\"class='btn btn-primary px-4 fw-bold'>Pinjam Buku</a>
+                        </td>";
+                    ?>
                     <p class="lead">Stock tersisa : <?php echo $stok; ?></p>
                 </div>
             </div>
