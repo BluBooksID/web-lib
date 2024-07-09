@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - BluBooks</title>
     <!-- Sisipkan CSS Font Awesome untuk ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Sisipkan CSS kustom untuk halaman login -->
     <link rel="stylesheet" href="../../resources/css/login.css">
     <!-- Sisipkan JavaScript khusus untuk admin -->
@@ -52,15 +50,13 @@
                 <!-- Input untuk email dengan validasi -->
                 <input id="email" type="email" name="email" placeholder="Email" required autocomplete="email">
                 <!-- Input untuk password dengan validasi -->
-                <input id="password" type="password" name="password" placeholder="Password" required
-                    autocomplete="new-password">
+                <input id="password" type="password" name="password" placeholder="Password" required autocomplete="new-password">
                 <!-- Konfirmasi password -->
-                <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password"
-                    required autocomplete="new-password">
+                <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
                 <!-- Tombol submit untuk registrasi -->
                 <button type="submit">REGISTER</button>
                 <!-- Tautan untuk login jika sudah memiliki akun -->
-                <p class="message">Sudah memiliki akun? <a href="../auth.php">Login</a></p>
+                <p class="message">Sudah memiliki akun? <a href="admin_login.php">Login</a></p>
                 <!-- Tautan untuk kembali ke halaman utama -->
                 <p class="message"><a href="../../index.php">Kembali ke Index</a></p>
             </form>
