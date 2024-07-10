@@ -104,7 +104,7 @@
                 </ul>
 
                 <div class="text-end">
-                    <a href="../logout.php" class="btn btn-outline-primary px-4 me-sm-3 fw-bold">Logout</a>
+                    <a href="../logout.php" class="btn btn-outline-light px-4 me-sm-3 fw-bold">Logout</a>
                 </div>
             </div>
         </div>

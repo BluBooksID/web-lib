@@ -63,7 +63,7 @@
                 </ul>
 
                 <div class="text-end">
-                    <a href="../logout.php" class="btn btn-outline-primary px-4 me-sm-3 fw-bold">Logout</a>
+                    <a href="../logout.php" class="btn btn-outline-light px-4 me-sm-3 fw-bold">Logout</a>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
     <!-- Akhir navbar -->
 
     <div class="container mt-5">
-        <h1 class="pb-3">Daftar Pinjaman Buku</h1>
+        <h2 class="mb-4">Daftar Pinjaman Buku</h2>
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead class="bg-light text-center">

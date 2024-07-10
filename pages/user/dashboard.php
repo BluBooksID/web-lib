@@ -43,7 +43,7 @@
                 </ul>
 
                 <div class="text-end">
-                    <a href="../logout.php" class="btn btn-outline-primary px-4 me-sm-3 fw-bold">Logout</a>
+                    <a href="../logout.php" class="btn btn-outline-light px-4 me-sm-3 fw-bold">Logout</a>
                 </div>
             </div>
         </div>
@@ -68,6 +68,7 @@
             </div>
         </div>
     </div>
+    <!-- Akhir konten -->
 
     <!-- Bisnis Favorit -->
     <div class="pb-3">
@@ -75,7 +76,8 @@
             <div class="p-5 text-center bg-body-tertiary rounded-4">
                 <div class="row pb-4">
                     <h4 class="col-md-2 mb-0">Bisnis Favorit</h4>
-                    <h6 class="col-md-10 text-end"><a href="#" class="px-2 text-body-secondary">Lihat Selengkapnya</a>
+                    <h6 class="col-md-10 text-end"><a href="data_buku.php?category=1"
+                            class="px-2 text-body-secondary">Lihat Selengkapnya</a>
                     </h6>
                 </div>
                 <div class="row row-cols-1 row-cols-md-5 g-4">
@@ -125,7 +127,8 @@
             <div class="p-5 text-center bg-body-tertiary rounded-4">
                 <div class="row pb-4">
                     <h4 class="col-md-2 mb-0">Novel Favorit</h4>
-                    <h6 class="col-md-10 text-end"><a href="#" class="px-2 text-body-secondary">Lihat Selengkapnya</a>
+                    <h6 class="col-md-10 text-end"><a href="data_buku.php?category=2"
+                            class="px-2 text-body-secondary">Lihat Selengkapnya</a>
                     </h6>
                 </div>
                 <div class="row row-cols-1 row-cols-md-5 g-4">
@@ -175,7 +178,8 @@
             <div class="p-5 text-center bg-body-tertiary rounded-4">
                 <div class="row pb-4">
                     <h4 class="col-md-2 mb-0">Komik Favorit</h4>
-                    <h6 class="col-md-10 text-end"><a href="#" class="px-2 text-body-secondary">Lihat Selengkapnya</a>
+                    <h6 class="col-md-10 text-end"><a href="data_buku.php?category=4"
+                            class="px-2 text-body-secondary">Lihat Selengkapnya</a>
                     </h6>
                 </div>
                 <div class="row row-cols-1 row-cols-md-5 g-4">
