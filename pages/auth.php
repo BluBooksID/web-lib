@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 
         if ($db->execute()) {
             $_SESSION['message'] = "Registrasi berhasil!";
-            header("Location: masuk.php");
+            header("Location: auth.php");
             exit();
         } else {
             $errors[] = "Error: " . $db->error;
@@ -153,7 +153,9 @@ $conn->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BluBooks</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/web-lib/resources/css/login.css">
 
 
@@ -181,7 +183,8 @@ $conn->close();
                 </select>
                 <input id="email" type="email" name="email" placeholder="Email *" required />
                 <input id="password" type="password" name="password" placeholder="Password *" required />
-                <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password *" required />
+                <input id="password-confirm" type="password" name="password_confirmation"
+                    placeholder="Confirm Password *" required />
                 <button type="submit" name="register">BUAT AKUN</button>
                 <p class="message">Sudah Daftar? <a href="#">Masuk</a></p>
             </form>
@@ -195,7 +198,9 @@ $conn->close();
                     }
                 }
                 ?>
-                <input id="credential" type="text" name="credential" value="<?php echo isset($_POST['credential']) ? htmlspecialchars($_POST['credential'], ENT_QUOTES) : ''; ?>" required autocomplete="credential" autofocus placeholder="NIM atau Email">
+                <input id="credential" type="text" name="credential"
+                    value="<?php echo isset($_POST['credential']) ? htmlspecialchars($_POST['credential'], ENT_QUOTES) : ''; ?>"
+                    required autocomplete="credential" autofocus placeholder="NIM atau Email">
                 <input id="password" type="password" name="password" placeholder="Password" required />
                 <button type="submit" name="login">LOGIN</button>
                 <p class="message">Belum Daftar? <a href="#">Buat Akun</a></p>

@@ -147,21 +147,14 @@
                     <div class="container bg-light border rounded-3 px-4 pb-5 p-4 p-md-5">
                         <h4 class="mb-3">Penggunaan Form</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis libero sed neque
-                            venenatis sollicitudin. Maecenas erat ligula, porta eu dictum non, ultricies eget sem.
-                            Integer in est porttitor, pulvinar tellus ac, pharetra massa. Vestibulum convallis
-                            vestibulum ornare. Aliquam laoreet eros quis purus volutpat, in gravida enim hendrerit.
-                            Aliquam dui lacus, gravida sit amet consectetur ut, venenatis eget ex. Donec efficitur,
-                            velit in pharetra pretium, nibh erat rhoncus odio, sit amet feugiat tortor orci ac felis.
-                            Morbi lacinia eros velit, et sollicitudin justo laoreet eget. Morbi lobortis augue ut
-                            finibus semper. Quisque gravida elit a enim feugiat, ut elementum urna placerat. Etiam eu
-                            euismod arcu. Ut fermentum a nulla nec sodales.
+                            Mohon untuk mengisi data buku sesuai dengan format yang telah ditetapkan, pastikan tidak ada
+                            bagian yang terlewatkan atau terabaikan agar informasi yang diberikan dapat tercatat dengan
+                            lengkap dan akurat.
                         </p>
                         <p>
-                            Vestibulum bibendum iaculis elementum. Ut nec lacus sed ligula vulputate sodales. Donec
-                            rhoncus fringilla laoreet. Nulla facilisi. In urna leo, feugiat at leo suscipit, mattis
-                            consequat nisi. Vestibulum ultrices purus in nunc consectetur commodo. Pellentesque habitant
-                            morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Jika terjadi kesalahan, Anda dapat mengedit data sesuai dengan format yang ditentukan.
+                            Pastikan untuk melengkapinya dengan informasi yang dibutuhkan agar buku dapat disusun dengan
+                            benar.
                         </p>
                     </div>
                 </div>
