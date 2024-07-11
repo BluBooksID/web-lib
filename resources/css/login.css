@@ -1,94 +1,80 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300);
 
 body {
-  background: url('../../public/assets/images/index_background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Poppins";
-  margin: 0;
-  height: 100vh; 
-}
-
-body#login-page {
-  height: 100vh;
-}
-
-body#register-page {
-  height: 140vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    background: #212529;
+    margin: 0;
 }
 
 .login-page {
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Ensure it takes full height of the viewport */
-}
-
-.register-page {
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 2% 0 0;
+    margin: auto;
 }
 
 .form {
-  position: relative;
-  z-index: 1;
-  background: #ffffff;
-  max-width: 400px;
-  padding: 45px;
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    position: relative;
+    z-index: 1;
+    background: #f8f9fa;
+    max-width: 400px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-.form input,
-.form select {
-  font-family: "Poppins", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  border-radius: 7px;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
+.form input, .form select {
+    font-family: "Poppins", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    border-radius: 7px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .form button {
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #6883F8;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #ffffff;
-  border-radius: 7px;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #212529;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    border-radius: 7px;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
 }
 
 .form button:hover,
 .form button:active,
 .form button:focus {
-  background: #5165bb;
+    background: #263238;
 }
 
 .form .message {
-  margin: 15px 0 0;
-  color: #7b7878;
-  font-size: 12px;
+    margin: 15px 0 0;
+    color: #7b7878;
+    font-size: 12px;
 }
 
 .form .message a {
-  color: #4a5894;
-  text-decoration: none;
+    color: #003B46;
+    text-decoration: none;
+}
+
+.form .register-form {
+    display: none;
 }
