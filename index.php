@@ -28,6 +28,7 @@
                 </div>
                 <div class="text-end">
                     <a href="pages/auth.php" class="btn btn-outline-light px-4 me-sm-3 fw-bold">Login / Register</a>
+                    <a href="pages/admin/admin_only.php" class="btn btn-outline-light px-4 me-sm-3 fw-bold">Admin</a>
                 </div>
             </div>
         </div>
