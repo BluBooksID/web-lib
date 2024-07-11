@@ -75,7 +75,7 @@
         <div class="container py-3">
             <div class="p-5 text-center bg-body-tertiary rounded-4">
                 <div class="row pb-4">
-                    <h4 class="col-md-2 mb-0">Bisnis Favorit</h4>
+                    <h4 class="col-md-2 mb-0">Teknologi Favorit</h4>
                     <h6 class="col-md-10 text-end"><a href="data_buku.php?category=1"
                             class="px-2 text-body-secondary">Lihat Selengkapnya</a>
                     </h6>
