@@ -77,7 +77,7 @@
                             <div class="col">
                                 <!-- Ganti <a> dengan <div> -->
                                 <div class="card h-100 border-0 shadow-sm rounded-3" onclick="redirectToLogin()">
-                                    <img src="../../<?php echo $cover; ?>" class="card-img-top rounded-top-3" alt="Cover Buku">
+                                    <img src="<?php echo $cover; ?>" class="card-img-top rounded-top-3" alt="Cover Buku">
                                     <div class="card-body d-flex flex-column">
                                         <p class="card-title"
                                             style="max-height: 3em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
