@@ -29,6 +29,9 @@
         exit();
     }
 
+    // Memasukkan file controller UserController.php untuk mengelola data pengguna
+    include '../../controllers/UserController.php';
+
     // Memasukkan file koneksi database
     include '../../db/koneksi.php';
 
