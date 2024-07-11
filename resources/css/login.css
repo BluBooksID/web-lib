@@ -1,12 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300);
 
 body {
+  background: url('../../public/assets/images/index_background.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins";
-  background: #ffff;
   margin: 0;
+  height: 100vh; 
 }
 
 body#login-page {
@@ -62,7 +64,7 @@ body#register-page {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #2896e5;
+  background: #6883F8;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -77,7 +79,7 @@ body#register-page {
 .form button:hover,
 .form button:active,
 .form button:focus {
-  background: #2573ab;
+  background: #5165bb;
 }
 
 .form .message {
@@ -87,6 +89,6 @@ body#register-page {
 }
 
 .form .message a {
-  color: #003b46;
+  color: #4a5894;
   text-decoration: none;
 }

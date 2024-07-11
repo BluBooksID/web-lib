@@ -5,27 +5,17 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #124265; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #2487ce; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff;
+  --default-color: #555353; 
+  --heading-color: #394576; 
+  --accent-color: #6883F8; 
+  --surface-color: #ffffff; 
+  --contrast-color: #ffffff;
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #124265;  /* The default color of the main navmenu links */
-  --nav-hover-color: #2487ce; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #124265; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #2487ce; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f6fafd;
@@ -41,11 +31,11 @@
 }
 
 .accent-background {
-  --background-color: #2487ce;
+  --background-color: #6883F8;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #ffffff;
-  --surface-color: #469fdf;
+  --surface-color: #425ac6;
   --contrast-color: #ffffff;
 }
 
@@ -64,7 +54,7 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--default-color);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -82,85 +72,6 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
-}
-
-/* Pulsating Play Button
-------------------------------*/
-.pulsating-play-btn {
-  width: 94px;
-  height: 94px;
-  background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
-  border-radius: 50%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-
-.pulsating-play-btn:before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  animation-delay: 0s;
-  animation: pulsate-play-btn 2s;
-  animation-direction: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps;
-  opacity: 1;
-  border-radius: 50%;
-  border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
-  top: -15%;
-  left: -15%;
-  background: rgba(198, 16, 0, 0);
-}
-
-.pulsating-play-btn:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 100;
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.pulsating-play-btn:hover:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 200;
-  animation: none;
-  border-radius: 0;
-}
-
-.pulsating-play-btn:hover:after {
-  border-left: 15px solid var(--accent-color);
-  transform: scale(20);
-}
-
-@keyframes pulsate-play-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
 }
 
 
@@ -182,15 +93,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 69px;
   margin-right: 8px;
-}
-
-.header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  font-weight: 300;
-  color: var(--heading-color);
 }
 
 .header .btn-getstarted,
@@ -278,127 +182,19 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
-  }
+
 
 }
 
-/* Navmenu - Mobile */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
 
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-  }
-
-  .navmenu ul {
-    display: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  }
-
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
-
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
-  }
-
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
-  }
-
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-
-  .mobile-nav-active .navmenu>ul {
-    display: block;
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #fff;
+  background: var(--accent-color);
   padding: 0 0 30px 0;
-  color: #47536e;
+  color: var(--default-color);
   font-size: 14px;
   background: #eff2f8;
 }
@@ -418,6 +214,8 @@ h6 {
   font-weight: 600;
   color: #47536e;
 }
+
+
 
 #footer .footer-newsletter form {
   margin-top: 30px;
@@ -444,7 +242,7 @@ h6 {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #5777ba;
+  background: var(--accent-color);
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
@@ -452,7 +250,7 @@ h6 {
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #415f9d;
+  background: #7b93c4;
 }
 
 #footer .footer-top {
@@ -460,8 +258,14 @@ h6 {
   background: #fff;
 }
 
+#footer .footer-top .footer-contact img {
+  max-height: 69px;
+  margin-right: 8px;
+
+}
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
+  
 }
 
 #footer .footer-top .footer-contact h4 {
@@ -478,13 +282,13 @@ h6 {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
-  color: #8a8c95;
+  color:var(--default-color);
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #47536e;
+  color: var(--accent-color);
   position: relative;
   padding-bottom: 12px;
 }
@@ -517,7 +321,7 @@ h6 {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #8a8c95;
+  color: var(--nav-color);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -525,14 +329,14 @@ h6 {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #5777ba;
+  color: var(--nav-hover-color);
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5777ba;
-  color: #fff;
+  background: var(--accent-color);
+  color: var(--contrast-color);
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -552,25 +356,16 @@ h6 {
 #footer .copyright {
   text-align: center;
   float: left;
-  color: #47536e;
+  color: var(--nav-hover-color);
 }
 
 #footer .credits {
   float: right;
   text-align: center;
   font-size: 13px;
-  color: #47536e;
+  color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
-
-  #footer .copyright,
-  #footer .credits {
-    float: none;
-    text-align: center;
-    padding: 5px 0;
-  }
-}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -638,15 +433,6 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -781,17 +567,6 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .hero p {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
 
 .hero .btn-get-started {
   color: var(--contrast-color);
@@ -850,15 +625,7 @@ section,
   color: var(--accent-color);
 }
 
-@media (min-width: 640px) {
-  .hero .icon-box:hover {
-    transform: scale(1.08);
-  }
 
-  .hero .icon-box:hover .title a {
-    color: var(--accent-color);
-  }
-}
 
 /*--------------------------------------------------------------
 # About Section
@@ -876,9 +643,6 @@ section,
   margin-top: 20px;
 }
 
-.about .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
 
 .about .mini-box {
   background-color: var(--surface-color);
@@ -926,23 +690,25 @@ section,
   color: var(--accent-color);
 }
 
-@media (min-width: 640px) {
-  .about .mini-box:hover {
-    transform: scale(1.08);
-  }
 
-  .about .mini-box:hover .title {
-    color: var(--accent-color);
-  }
-}
 
 
 
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
+
+.testimonials {
+  text-align: center;
+}
+
+.testimonials .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonials .carousel,
+.testimonials .carousel-inner {
   overflow: hidden;
 }
 
@@ -955,7 +721,7 @@ section,
   width: 79px;
   height: 95px;
   border-radius: 50%;
-  margin: -40px 0 0 40px;
+  margin: 0 auto 10px auto;
   position: relative;
   z-index: 2;
   border: 6px solid var(--background-color);
@@ -964,13 +730,13 @@ section,
 .testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
-  margin: 10px 0 5px 45px;
+  margin: 10px 0 5px 0;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0 0 0 45px;
+  margin: 0 0 20px 0;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
@@ -1005,16 +771,15 @@ section,
   z-index: 1;
 }
 
-.testimonials .swiper-wrapper {
+.testimonials .carousel-inner {
   height: auto;
 }
 
-.testimonials .swiper-pagination {
+.testimonials .carousel-indicators {
   margin-top: 20px;
-  position: relative;
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet {
+.testimonials .carousel-indicators [data-bs-target] {
   width: 12px;
   height: 12px;
   background-color: var(--background-color);
@@ -1022,9 +787,11 @@ section,
   border: 1px solid var(--accent-color);
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+.testimonials .carousel-indicators .active {
   background-color: var(--accent-color);
 }
+
+
 
 /*--------------------------------------------------------------
 # Kategori Section
@@ -1056,16 +823,8 @@ section,
   position: relative;
 }
 
-.services .service-item .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-.services .service-item .icon svg path {
-  transition: 0.5s;
-  fill: color-mix(in srgb, var(--default-color), transparent 95%);
-}
+
 
 .services .service-item h3 {
   font-weight: 700;
@@ -1110,16 +869,7 @@ section,
   position: relative;
 }
 
-.services .service-item .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-.services .service-item .icon svg path {
-  transition: 0.5s;
-  fill: color-mix(in srgb, var(--default-color), transparent 95%);
-}
 
 /* Arrow Styles */
 .carousel-control-prev,
@@ -1155,86 +905,34 @@ section,
   font-size: 1.5em;
 }
 
-/* Hide Arrow on Mobile */
-@media (max-width: 768px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: none;
-  }
-}
 
 
 .services .service-item.item-cyan i {
   color: #0dcaf0;
 }
 
-.services .service-item.item-cyan:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-cyan:hover .icon svg path {
-  fill: #0dcaf0;
-}
-
 .services .service-item.item-orange i {
   color: #fd7e14;
-}
-
-.services .service-item.item-orange:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-orange:hover .icon svg path {
-  fill: #fd7e14;
 }
 
 .services .service-item.item-teal i {
   color: #20c997;
 }
 
-.services .service-item.item-teal:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-teal:hover .icon svg path {
-  fill: #20c997;
-}
-
 .services .service-item.item-red i {
   color: #df1529;
 }
 
-.services .service-item.item-red:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-red:hover .icon svg path {
-  fill: #df1529;
-}
 
 .services .service-item.item-purple i {
   color: #6610f2;
 }
 
-.services .service-item.item-purple:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-purple:hover .icon svg path {
-  fill: #6610f2;
-}
 
 .services .service-item.item-yellow i {
   color: #f3c200;
 }
 
-.services .service-item.item-yellow:hover .icon i {
-  color: #fff;
-}
-
-.services .service-item.item-yellow:hover .icon svg path {
-  fill: #f3c200;
-}
 
 
 /*--------------------------------------------------------------
@@ -1292,39 +990,6 @@ section,
   overflow: hidden;
 }
 
-.team .team-member .social {
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  right: 0;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  text-align: center;
-}
-
-.team .team-member .social a {
-  background: color-mix(in srgb, var(--contrast-color), transparent 25%);
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0 3px;
-  border-radius: 4px;
-  width: 36px;
-  height: 36px;
-  transition: ease-in-out 0.3s;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.team .team-member .social a:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-}
-
-.team .team-member .social i {
-  font-size: 18px;
-  line-height: 0;
-}
-
 .team .team-member .member-info {
   padding: 25px 15px;
 }
@@ -1340,10 +1005,5 @@ section,
   font-size: 13px;
   font-weight: 400;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.team .team-member:hover .social {
-  opacity: 1;
-  bottom: 15px;
 }
 
