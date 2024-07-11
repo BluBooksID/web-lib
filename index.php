@@ -53,6 +53,61 @@
     </div>
     <!-- Akhir konten -->
 
+    <!-- Buku Favorit -->
+    <div class="pb-5">
+        <div class="container py-3">
+            <div class="p-5 text-center bg-body-tertiary rounded-4">
+                <div class="row pb-4">
+                    <h4 class="col-md-2 mb-0">Buku Favorit</h4>
+                </div>
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                    <?php
+                    // Query untuk mengambil data 15 buku favorit tanpa membatasi berdasarkan kategori
+                    $sql = "SELECT id_buku, cover, author_buku, nama_buku, stok FROM buku LIMIT 15";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // Loop melalui setiap baris hasil query
+                        while ($row = $result->fetch_assoc()) {
+                            $cover = $row["cover"];
+                            $author_buku = $row["author_buku"];
+                            $nama_buku = $row["nama_buku"];
+                            $stok = $row["stok"];
+                            ?>
+                            <div class="col">
+                                <!-- Ganti <a> dengan <div> -->
+                                <div class="card h-100 border-0 shadow-sm rounded-3" onclick="redirectToLogin()">
+                                    <img src="../../<?php echo $cover; ?>" class="card-img-top rounded-top-3" alt="Cover Buku">
+                                    <div class="card-body d-flex flex-column">
+                                        <p class="card-title"
+                                            style="max-height: 3em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                            <?php echo $nama_buku; ?>
+                                        </p>
+                                        <p class="card-text fw-lighter mt-auto"><?php echo $author_buku; ?></p>
+                                        <p class="fs-6 fw-bold">Stok : <?php echo $stok; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        echo "Data tidak ditemukan";
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengarahkan pengguna ke halaman login
+        function redirectToLogin() {
+            window.location.href = 'pages/auth.php';
+        }
+    </script>
+
+    <!-- Akhir konten -->
+
     <!-- Awal footer -->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

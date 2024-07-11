@@ -153,57 +153,105 @@ $conn->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BluBooks</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/web-lib/resources/css/login.css">
-
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
-<body>
-    <div class="login-page">
-        <div class="form">
-            <form class="register-form" method="POST" action="">
-                <h2><i class="fas fa-lock"></i> Register</h2>
-                <?php
-                if (!empty($errors)) {
-                    foreach ($errors as $error) {
-                        echo "<p style='color:red;'>$error</p>";
-                    }
-                }
-                ?>
-                <input id=NIM type="text" name="NIM" placeholder="NIM *" required />
-                <input id="nama_pengguna" type="text" name="nama_pengguna" placeholder="Nama Pengguna *" required />
-                <input id="alamat" type="text" name="alamat" placeholder="Alamat *" required />
-                <select name="jenis_kelamin" required>
-                    <option value="" disabled selected>Jenis Kelamin *</option>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                </select>
-                <input id="email" type="email" name="email" placeholder="Email *" required />
-                <input id="password" type="password" name="password" placeholder="Password *" required />
-                <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password *" required />
-                <button type="submit" name="register">BUAT AKUN</button>
-                <p class="message">Sudah Daftar? <a href="#">Masuk</a></p>
-            </form>
+<body class="bg-light">
+    <div class="container-fluid py-5">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <!-- Register Form -->
+                        <form class="register-form" method="POST" action="" style="display: none;">
+                            <h2 class="text-center mb-4"><i class="fas fa-lock"></i> Register</h2>
+                            <?php
+                            if (!empty($errors)) {
+                                foreach ($errors as $error) {
+                                    echo "<div class='alert alert-danger'>$error</div>";
+                                }
+                            }
+                            ?>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="NIM" name="NIM" placeholder="NIM *"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="nama_pengguna" name="nama_pengguna"
+                                    placeholder="Nama Pengguna *" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat *"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select" name="jenis_kelamin" required>
+                                    <option value="" disabled selected>Jenis Kelamin *</option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email *"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password *" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" id="password-confirm"
+                                    name="password_confirmation" placeholder="Confirm Password *" required>
+                            </div>
+                            <button type="submit" name="register" class="btn btn-primary w-100">BUAT AKUN</button>
+                            <p class="text-center mt-3">Sudah Daftar? <a href="#" class="toggle-form">Masuk</a></p>
+                        </form>
 
-            <form class="login-form" method="POST" action="">
-                <h2><i class="fas fa-lock"></i> Login</h2>
-                <?php
-                if (!empty($errors)) {
-                    foreach ($errors as $error) {
-                        echo "<p style='color:red;'>$error</p>";
-                    }
-                }
-                ?>
-                <input id="credential" type="text" name="credential" value="<?php echo isset($_POST['credential']) ? htmlspecialchars($_POST['credential'], ENT_QUOTES) : ''; ?>" required autocomplete="credential" autofocus placeholder="NIM atau Email">
-                <input id="password" type="password" name="password" placeholder="Password" required />
-                <button type="submit" name="login">LOGIN</button>
-                <p class="message">Belum Daftar? <a href="#">Buat Akun</a></p>
-            </form>
+                        <!-- Login Form -->
+                        <form class="login-form" method="POST" action="">
+                            <h2 class="text-center mb-4"><i class="fas fa-lock"></i> Login</h2>
+                            <?php
+                            if (!empty($errors)) {
+                                foreach ($errors as $error) {
+                                    echo "<div class='alert alert-danger'>$error</div>";
+                                }
+                            }
+                            ?>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="credential" name="credential"
+                                    value="<?php echo isset($_POST['credential']) ? htmlspecialchars($_POST['credential'], ENT_QUOTES) : ''; ?>"
+                                    required autocomplete="credential" autofocus placeholder="NIM atau Email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password" required>
+                            </div>
+                            <button type="submit" name="login" class="btn btn-primary w-100">LOGIN</button>
+                            <p class="text-center mt-3">Belum Daftar? <a href="#" class="toggle-form">Buat Akun</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/web-lib/resources/js/app.js"></script>
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function () {
+            $('.toggle-form').click(function (e) {
+                e.preventDefault();
+                $('.login-form, .register-form').toggle();
+            });
+        });
+    </script>
 </body>
 
 </html>
