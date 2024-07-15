@@ -3,17 +3,11 @@
 
 <head>
     <title>Edit Buku</title>
-<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="../../resources/css/style.css" rel="stylesheet">
     <!-- Favicons -->
     <link href="../../public/assets/images/favicon.png" rel="icon">
-=======
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
 </head>
 
 <body>
@@ -58,7 +52,6 @@
     ?>
     <!-- Akhir php-backend -->
 
-<<<<<<< HEAD
     <!-- Awal Navbar -->
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -85,34 +78,11 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../logout.php">Logout</a>
                     </div>
-=======
-    <!-- Navbar -->
-    <header class="p-3 text-bg-dark">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <div class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <img src="/web-lib/resources/asset/logo.svg" alt="Logo" width="150" height="35">
-                </div>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-4">
-                    <li><a href="dashboard.php" class="nav-link px-2 text-white">Home</a></li>
-                    <li><a href="data_buku.php" class="nav-link px-2 text-white">Kelola Buku</a></li>
-                    <li><a href="admin_pinjaman.php" class="nav-link px-2 text-white">Kelola Pinjaman Buku</a></li>
-                    <li><a href="riwayat_transaksi.php" class="nav-link px-2 text-white">Riwayat Transaksi</a></li>
-                </ul>
-
-                <div class="text-end">
-                    <a href="../logout.php" class="btn btn-outline-light px-4 me-sm-3 fw-bold">Logout</a>
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
             </div>
         </div>
     </header>
-<<<<<<< HEAD
     <!-- Navbar End -->
-=======
-    <!-- End Navbar -->
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
 
     <div class="container my-5">
         <nav aria-label="breadcrumb">
@@ -147,52 +117,27 @@
 
                 <div class="mb-3">
                     <label for="nama_buku" class="form-label">Nama Buku</label>
-<<<<<<< HEAD
                     <input type="text" class="form-control" id="nama_buku" name="nama_buku" value="<?php echo $row['nama_buku']; ?>">
-=======
-                    <input type="text" class="form-control" id="nama_buku" name="nama_buku"
-                        value="<?php echo $row['nama_buku']; ?>">
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
 
                 <div class="mb-3">
                     <label for="author_buku" class="form-label">Author Buku</label>
-<<<<<<< HEAD
                     <input type="text" class="form-control" id="author_buku" name="author_buku" value="<?php echo $row['author_buku']; ?>">
-=======
-                    <input type="text" class="form-control" id="author_buku" name="author_buku"
-                        value="<?php echo $row['author_buku']; ?>">
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
 
                 <div class="mb-3">
                     <label for="tanggal_terbit" class="form-label">Tanggal Terbit</label>
-<<<<<<< HEAD
                     <input type="date" class="form-control" id="tanggal_terbit" name="tanggal_terbit" value="<?php echo $row['tanggal_terbit']; ?>">
-=======
-                    <input type="date" class="form-control" id="tanggal_terbit" name="tanggal_terbit"
-                        value="<?php echo $row['tanggal_terbit']; ?>">
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
 
                 <div class="mb-3">
                     <label for="bahasa" class="form-label">Bahasa</label>
-<<<<<<< HEAD
                     <input type="text" class="form-control" id="bahasa" name="bahasa" value="<?php echo $row['bahasa']; ?>">
-=======
-                    <input type="text" class="form-control" id="bahasa" name="bahasa"
-                        value="<?php echo $row['bahasa']; ?>">
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
 
                 <div class="mb-3">
                     <label for="deskripsi" class="form-label">Deskripsi</label>
-<<<<<<< HEAD
                     <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3"><?php echo $row['deskripsi']; ?></textarea>
-=======
-                    <textarea class="form-control" id="deskripsi" name="deskripsi"
-                        rows="3"><?php echo $row['deskripsi']; ?></textarea>
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
 
                 <div class="mb-3">
@@ -230,7 +175,6 @@
         </footer>
     </div>
     <!-- Akhir footer -->
-<<<<<<< HEAD
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -246,12 +190,6 @@
     <script src="../../resources/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-=======
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
->>>>>>> ae26024624bab70b786c20fad2097e733335f6de
 </body>
 
 </html>
