@@ -118,8 +118,9 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="dashboard.php" class="nav-item nav-link active">Home<br></a></li>
-                    <li><a href="data_buku.php" class="nav-item nav-link ">List Buku</a></li>
+                    <li><a href="dashboard.php" class="nav-item nav-link ">Home<br></a></li>
+                    
+                    <li><a href="data_buku.php" class="nav-item nav-link active">List Buku</a></li>
                     <li>
                         <form class="form-inline" action="data_buku.php" method="GET" style="display: flex;">
                             <input class="form-control mr-sm-2" type="search" placeholder="Cari Buku" aria-label="Search">
