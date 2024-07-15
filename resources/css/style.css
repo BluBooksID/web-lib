@@ -6507,23 +6507,23 @@ button.bg-dark:focus {
 }
 
 .border {
-  border: 1px solid #6f6f6f !important;
+  border: 1px hidden #6f6f6f !important;
 }
 
 .border-top {
-  border-top: 1px solid #6f6f6f !important;
+  border-top: 1px hidden #6f6f6f !important;
 }
 
 .border-right {
-  border-right: 1px solid #6f6f6f !important;
+  border-right: 1px hidden #6f6f6f !important;
 }
 
 .border-bottom {
-  border-bottom: 1px solid #6f6f6f !important;
+  border-bottom: 1px hidden #6f6f6f !important;
 }
 
 .border-left {
-  border-left: 1px solid #6f6f6f !important;
+  border-left: 1px hidden #6f6f6f !important;
 }
 
 .border-0 {
