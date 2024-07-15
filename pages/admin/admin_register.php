@@ -8,7 +8,11 @@
     <title>Register - BluBooks</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../../resources/css/login.css">
+=======
+    <link rel="stylesheet" href="/web-lib/resources/css/login.css">
+>>>>>>> ae26024624bab70b786c20fad2097e733335f6de
 </head>
 
 <body>
@@ -27,7 +31,12 @@
 
             <form method="POST" action="">
                 <div class="mb-3">
+<<<<<<< HEAD
                     <input id="nama" type="text" class="form-control" name="nama" placeholder="Nama" required autocomplete="nama" autofocus>
+=======
+                    <input id="nama" type="text" class="form-control" name="nama" placeholder="Nama" required
+                        autocomplete="nama" autofocus>
+>>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
 
                 <div class="mb-3">
@@ -39,6 +48,7 @@
                 </div>
 
                 <div class="mb-3">
+<<<<<<< HEAD
                     <input id="email" type="email" class="form-control" name="email" placeholder="Email" required autocomplete="email">
                 </div>
 
@@ -48,11 +58,29 @@
 
                 <div class="mb-3">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
+=======
+                    <input id="email" type="email" class="form-control" name="email" placeholder="Email" required
+                        autocomplete="email">
+                </div>
+
+                <div class="mb-3">
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password"
+                        required autocomplete="new-password">
+                </div>
+
+                <div class="mb-3">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                        placeholder="Confirm Password" required autocomplete="new-password">
+>>>>>>> ae26024624bab70b786c20fad2097e733335f6de
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100 mb-3">REGISTER</button>
 
+<<<<<<< HEAD
                 <p class="message">Sudah Daftar? <a href="admin_login.php">Masuk</a></p>
+=======
+                <p class="message">Sudah Daftar? <a href="/web-lib/pages/auth.php">Masuk</a></p>
+>>>>>>> ae26024624bab70b786c20fad2097e733335f6de
             </form>
         </div>
     </div>

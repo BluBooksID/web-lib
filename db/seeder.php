@@ -3,11 +3,11 @@ include 'koneksi.php';
 
 // Data untuk dimasukkan ke tabel kategori
 $kategori = [
-    'Komik',
+    'Teknologi',
     'Novel',
+    'Komik',
     'Pendidikan',
-    'Sains',
-    'Teknologi'
+    'Sains'
 ];
 
 // Fungsi untuk menampilkan hasil

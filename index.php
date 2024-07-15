@@ -20,7 +20,6 @@
   <!-- Vendor CSS Files -->
   <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="resources/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="resources/vendor/aos/aos.css" rel="stylesheet">
   <link href="resources/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
@@ -63,22 +62,22 @@ include("db/koneksi.php");
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
-      <img src="public/assets/images/index_background.jpg" alt="" data-aos="fade-in" class="">
+      <img src="public/assets/images/index_background.jpg" alt="" class="">
 
       <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-out">
+        <div class="row justify-content-center">
           <div class="col-xl-7 col-lg-9 text-center">
             <h2>Temukan buku impianmu dan pinjam dengan mudah di BluBooks</h2>
             <p>BluBooks hadir untuk memberikan kemudahan bagi para pecinta buku dalam menemukan dan meminjam buku favorit.
               Dengan koleksi yang beragam dan terus diperbarui, BluBooks memastikan setiap pembaca dapat menemukan buku yang sesuai dengan minat.</p>
           </div>
         </div>
-        <div class="text-center" data-aos="zoom-out" data-aos-delay="100">
+        <div class="text-center">
           <a href="pages/login.php" class="btn-get-started">Ayo Mulai!</a>
         </div>
 
         <div class="row gy-4 mt-5">
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="100">
+          <div class="col-md-6 col-lg-3">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
               <h4 class="title"><a href="">Mudah dan Cepat</a></h4>
@@ -86,7 +85,7 @@ include("db/koneksi.php");
             </div>
           </div><!--End Icon Box -->
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="200">
+          <div class="col-md-6 col-lg-3">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-book-half"></i></div>
               <h4 class="title"><a href="">Koleksi Beragam</a></h4>
@@ -94,7 +93,7 @@ include("db/koneksi.php");
             </div>
           </div><!--End Icon Box -->
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="300">
+          <div class="col-md-6 col-lg-3">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-clock-fill"></i></div>
               <h4 class="title"><a href="">Akses Kapan Saja</a></h4>
@@ -102,29 +101,26 @@ include("db/koneksi.php");
             </div>
           </div><!--End Icon Box -->
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="400">
+          <div class="col-md-6 col-lg-3">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-stars"></i></div>
               <h4 class="title"><a href="">Buku Berkualitas</a></h4>
               <p class="description">Semua buku yang tersedia di BluBooks dipilih dengan cermat untuk memastikan kualitas dan kepuasan peminjam.</p>
             </div>
-          </div><!--End Icon Box -->
-
         </div>
-      </div>
-
-    </section><!-- /Hero Section -->
+    </header>
+    <!-- Akhir navbar -->
 
     <!-- About Section -->
     <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Buku Populer</h2>
         <p>Terdapat buku-buku populer dari koleksi kami yang beragam.</p>
       </div>
 
       <div class="container">
         <div class="row gy-4 mt-5">
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="100">
+          <div class="col-md-6 col-lg-3">
             <div class="mini-box">
               <img src="public/assets/images/atomic-habits.png" alt="Atomic Habits" class="img-fluid">
               <p class="author">James Clear</p>
@@ -132,7 +128,7 @@ include("db/koneksi.php");
             </div>
           </div><!--End mini Box -->
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="200">
+          <div class="col-md-6 col-lg-3">
             <div class="mini-box">
               <img src="public/assets/images/Monster.jpg" alt="Monsters" class="img-fluid">
               <p class="author">NAOKI URASAWA</p>
@@ -140,7 +136,7 @@ include("db/koneksi.php");
             </div>
           </div><!--End mini Box -->
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="300">
+          <div class="col-md-6 col-lg-3">
             <div class="mini-box">
               <img src="public/assets/images/komi.jpg" alt="Komi" class="img-fluid">
               <p class="author">Tomohito Oda</p>
@@ -148,23 +144,21 @@ include("db/koneksi.php");
             </div>
           </div><!--End mini Box -->
 
-          <div class="col-md-6 col-lg-3" data-aos="zoom-out" data-aos-delay="300">
+          <div class="col-md-6 col-lg-3">
             <div class="mini-box">
               <img src="public/assets/images/keigo.jpg" alt="Keigo" class="img-fluid">
               <p class="author">Keigo Higashino</p>
               <h4 class="title">Rumus Kebenaran Musim Panas: A Midsummer`s Equation (Manatsu no Hoteishiki)</h4>
             </div>
-          </div><!--End mini Box -->
         </div>
-      </div>
-    </section><!-- /About Section -->
-
+    </div>
+    <!-- Akhir konten -->
 
     <!-- Kategori Buku Section -->
     <section id="services" class="services section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Kategori Buku</h2>
         <p>Temukan berbagai kategori buku yang tersedia untuk memenuhi semua minat dan kebutuhan membaca Anda.</p>
       </div><!-- End Section Title -->
@@ -178,7 +172,7 @@ include("db/koneksi.php");
             <!-- Carousel Item 1 -->
             <div class="carousel-item active">
               <div class="row gy-4">
-                <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6">
                   <div class="service-item item-cyan position-relative">
                     <div class="icon">
                       <i class="bi bi-activity"></i>
@@ -188,7 +182,7 @@ include("db/koneksi.php");
                   </div>
                 </div><!-- End Service Item -->
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6">
                   <div class="service-item item-orange position-relative">
                     <div class="icon">
                       <i class="bi bi-broadcast"></i>
@@ -198,7 +192,7 @@ include("db/koneksi.php");
                   </div>
                 </div><!-- End Service Item -->
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="col-lg-4 col-md-6">
                   <div class="service-item item-teal position-relative">
                     <div class="icon">
                       <i class="bi bi-easel"></i>
@@ -213,7 +207,7 @@ include("db/koneksi.php");
             <!-- Carousel Item 2 -->
             <div class="carousel-item">
               <div class="row gy-4">
-                <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                <div class="col-lg-4 col-md-6">
                   <div class="service-item item-red position-relative">
                     <div class="icon">
                       <i class="bi bi-book-half"></i>
@@ -233,7 +227,7 @@ include("db/koneksi.php");
                   </div>
                 </div><!-- End Service Item -->
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="col-lg-4 col-md-6">
                   <div class="service-item item-yellow position-relative">
                     <div class="icon">
                       <i class="bi bi-journal-richtext"></i>
@@ -267,19 +261,19 @@ include("db/koneksi.php");
     <section id="testimonials" class="testimonials section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Testimoni Pengguna</h2>
-        <p>Baca pengalaman langsung dari para pengguna BluBooksID yang telah menemukan buku-buku favorit mereka. Temukan mengapa BluBooksID menjadi pilihan utama untuk memenuhi kebutuhan membaca Anda.</p>
+        <p>Baca pengalaman langsung dari para pengguna BluBooks yang telah menemukan buku-buku favorit mereka. Temukan mengapa BluBooks menjadi pilihan utama untuk memenuhi kebutuhan membaca Anda.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>BluBooksID adalah platform yang sangat membantu saya dalam menemukan buku-buku favorit dengan mudah. Saya senang dengan koleksi yang mereka tawarkan!</span>
+                  <span>BluBooks adalah platform yang sangat membantu saya dalam menemukan buku-buku favorit dengan mudah. Saya senang dengan koleksi yang mereka tawarkan!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="public/assets/images/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -292,7 +286,7 @@ include("db/koneksi.php");
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Pelayanan dari BluBooksID luar biasa. Buku yang saya pinjam selalu dalam kondisi baik dan proses pengembalian sangat lancar. Terima kasih!</span>
+                  <span>Pelayanan dari BluBooks luar biasa. Buku yang saya pinjam selalu dalam kondisi baik dan proses pengembalian sangat lancar. Terima kasih!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="public/assets/images/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -305,7 +299,7 @@ include("db/koneksi.php");
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Saya sangat suka dengan variasi buku di BluBooksID. Dari buku pelajaran hingga novel terbaru, semuanya ada di sini!</span>
+                  <span>Saya sangat suka dengan variasi buku di BluBooks. Dari buku pelajaran hingga novel terbaru, semuanya ada di sini!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="public/assets/images/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -318,7 +312,7 @@ include("db/koneksi.php");
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Sebagai pembaca berat, BluBooksID adalah tempat yang sempurna untuk memenuhi kebutuhan bacaan saya. Saya sudah merekomendasikan ke teman-teman!</span>
+                  <span>Sebagai pembaca berat, BluBooks adalah tempat yang sempurna untuk memenuhi kebutuhan bacaan saya. Saya sudah merekomendasikan ke teman-teman!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="public/assets/images/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -331,7 +325,7 @@ include("db/koneksi.php");
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Saya senang dengan kemudahan akses dan ketersediaan buku-buku terbaru di BluBooksID. Layanan mereka sungguh memuaskan!</span>
+                  <span>Saya senang dengan kemudahan akses dan ketersediaan buku-buku terbaru di BluBooks. Layanan mereka sungguh memuaskan!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
                 <img src="public/assets/images/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -357,10 +351,11 @@ include("db/koneksi.php");
 
 
 
+
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section accent-background">
 
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-10">
             <div class="text-center">
@@ -378,14 +373,14 @@ include("db/koneksi.php");
     <!-- Team Section -->
     <section id="team" class="team section light-background">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Anggota Kelompok 9</h2>
       </div><!-- End Section Title -->
 
       <div class="container">
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="team-member">
               <div class="member-img">
                 <img src="public\assets\images\team\team-1.jpg" class="img-fluid" alt="">
@@ -397,7 +392,7 @@ include("db/koneksi.php");
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="team-member">
               <div class="member-img">
                 <img src="public/assets/images/team/team-2.jpg" class="img-fluid" alt="">
@@ -408,7 +403,7 @@ include("db/koneksi.php");
               </div>
             </div>
           </div><!-- End Team Member -->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="team-member">
               <div class="member-img">
                 <img src="public/assets/images/team/team-3.jpg" class="img-fluid" alt="">
@@ -420,7 +415,7 @@ include("db/koneksi.php");
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="team-member">
               <div class="member-img">
                 <img src="public/assets/images/team/team-4.jpg" class="img-fluid" alt="">
@@ -432,7 +427,7 @@ include("db/koneksi.php");
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="team-member">
               <div class="member-img">
                 <img src="public/assets/images/team/team-5.jpg" class="img-fluid" alt="">
@@ -444,7 +439,7 @@ include("db/koneksi.php");
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="team-member">
               <div class="member-img">
                 <img src="public/assets/images/team/team-6.jpg" class="img-fluid" alt="">
@@ -474,26 +469,22 @@ include("db/koneksi.php");
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
+    <script>
+        // Fungsi untuk mengarahkan pengguna ke halaman login
+        function redirectToLogin() {
+            window.location.href = 'pages/auth.php';
+        }
+    </script>
 
-            <div class="col-lg-3 col-md-6 footer-contact">
+    <!-- Akhir konten -->
 
-              <h3>BluBooks</h3>
-              <p>
-                <a href="https://www.google.com/maps/place/ARS+University/@-6.9104962,107.6499176,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e7eb9456ae97:0x9fd67cfa593e7dc9!8m2!3d-6.9104962!4d107.6499176!16s%2Fg%2F1ptxxdtq9?entry=ttu" target="_blank">
-                  Jalan Sekolah Internasional No.1-2 Antapani, <br>
-                  Bandung - Jawa Barat,40282<br>
-                  Indonesia
-                </a>
-                <br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> blubooks@ars.id<br>
-              </p>
-
+    <!-- Awal footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2024 BluBooks</span>
             </div>
 
             <div class="col-lg-6 col-md-6 footer-links">
@@ -538,7 +529,6 @@ include("db/koneksi.php");
 
     <!-- Vendor JS Files -->
     <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="resources/vendor/aos/aos.js"></script>
     <script src="resources/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="resources/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="resources/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
