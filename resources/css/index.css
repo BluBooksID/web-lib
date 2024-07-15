@@ -182,10 +182,18 @@ h6 {
     padding-right: 0;
   }
 
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
 
-
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--accent-color);
+  }
 }
-
 
 
 /*--------------------------------------------------------------
@@ -348,7 +356,7 @@ h6 {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #27282c;
+  background: var(--accent-color);
   color: #fff;
   text-decoration: none;
 }
@@ -623,8 +631,17 @@ section,
   font-size: 36px;
   line-height: 1;
   color: var(--accent-color);
+  
 }
+@media (min-width: 640px) {
+  .hero .icon-box:hover {
+    transform: scale(1.08);
+  }
 
+  .hero .icon-box:hover .title a {
+    color: var(--accent-color);
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -690,9 +707,15 @@ section,
   color: var(--accent-color);
 }
 
+@media (min-width: 640px) {
+  .about .mini-box:hover {
+    transform: scale(1.08);
+  }
 
-
-
+  .about .mini-box:hover .title {
+    color: var(--accent-color);
+  }
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -790,7 +813,6 @@ section,
 .testimonials .carousel-indicators .active {
   background-color: var(--accent-color);
 }
-
 
 
 /*--------------------------------------------------------------

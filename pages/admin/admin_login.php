@@ -80,7 +80,7 @@ $conn->close();
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/web-lib/resources/js/app.js"></script>
+    <script src="../../resources/js/app.js"></script>
 </body>
 
 </html>
