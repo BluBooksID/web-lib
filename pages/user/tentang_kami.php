@@ -3,6 +3,7 @@
 
 <head>
     <title>Buku yang Dipinjam</title>
+    <link rel="icon" type="image/x-icon" href="/web-lib/resources/asset/favicon.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -93,7 +94,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="/web-lib/resources/asset/images.jpg" class="card-img-top" alt="Foto Tim 1">
+                        <img src="/web-lib/resources/asset/people1.png" class="card-img-top" alt="Foto Tim 1">
                         <div class="card-body">
                             <h5 class="card-title">Aliffian Cahya</h5>
                             <p class="card-text">Backend</p>
@@ -102,7 +103,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="/web-lib/resources/asset/images.jpg" class="card-img-top" alt="Foto Tim 2">
+                        <img src="/web-lib/resources/asset/people2.png" class="card-img-top" alt="Foto Tim 2">
                         <div class="card-body">
                             <h5 class="card-title">Aria Zufar Shada</h5>
                             <p class="card-text">Frontend</p>

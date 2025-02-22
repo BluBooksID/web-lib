@@ -5,7 +5,8 @@
     <!-- Set karakter encoding dan viewport untuk responsif -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>BluBooks</title>
+    <link rel="icon" type="image/x-icon" href="/web-lib/resources/asset/favicon.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,7 +16,7 @@
     <!-- Awal php-backend -->
     <?php
     // Sisipkan file koneksi database
-    include ("db/koneksi.php");
+    include("db/koneksi.php");
     ?>
     <!-- Akhir php-backend -->
 
