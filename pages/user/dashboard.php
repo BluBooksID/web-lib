@@ -40,6 +40,7 @@
                     <li><a href="dashboard.php" class="nav-link px-2 text-secondary">Home</a></li>
                     <li><a href="data_buku.php" class="nav-link px-2 text-white">List Buku</a></li>
                     <li><a href="list_pinjam_buku.php" class="nav-link px-2 text-white">Daftar Pinjaman Buku</a></li>
+                    <li><a href="tentang_kami.php" class="nav-link px-2 text-white">Tentang Kami</a></li>
                 </ul>
 
                 <div class="text-end">

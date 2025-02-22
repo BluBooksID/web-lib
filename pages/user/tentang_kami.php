@@ -58,9 +58,9 @@
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-4">
                     <li><a href="dashboard.php" class="nav-link px-2 text-white">Home</a></li>
                     <li><a href="data_buku.php" class="nav-link px-2 text-white">List Buku</a></li>
-                    <li><a href="list_pinjam_buku.php" class="nav-link px-2 text-secondary">Daftar Pinjaman Buku</a>
+                    <li><a href="list_pinjam_buku.php" class="nav-link px-2 text-white">Daftar Pinjaman Buku</a>
                     </li>
-                    <li><a href="tentang_kami.php" class="nav-link px-2 text-white">Tentang Kami</a></li>
+                    <li><a href="tentang_kami.php" class="nav-link px-2 text-secondary">Tentang Kami</a></li>
                 </ul>
 
                 <div class="text-end">
@@ -71,49 +71,48 @@
     </header>
     <!-- Akhir navbar -->
 
-    <div class="container mt-5">
-        <h2 class="mb-4">Daftar Pinjaman Buku</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead class="bg-light text-center">
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama Buku</th>
-                        <th scope="col">Tanggal Pinjam</th>
-                        <th scope="col">Tanggal Pengembalian</th>
-                        <th scope="col">Status</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    // Menampilkan data buku yang dipinjam jika ada hasil query
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td class='text-center'>" . $counter . "</td>"; // Menampilkan nomor urut, di tengah
-                            echo "<td>" . $row["nama_buku"] . "</td>";
-                            echo "<td class='text-center'>" . $row["tanggal_pinjam"] . "</td>"; // Tanggal pinjam, di tengah
-                            echo "<td class='text-center'>" . ($row["tanggal_pengembalian"] ? $row["tanggal_pengembalian"] : "Belum dikembalikan") . "</td>"; // Tanggal pengembalian, di tengah
-                            echo "<td class='text-center'>" . ucfirst($row["status_buku"]) . "</td>"; // Status, di tengah
-                            echo "<td class='text-center'>";
-                            // Tombol untuk mengembalikan buku, di tengah
-                            if ($row["status_buku"] == 'dipinjam') {
-                                echo "<a href='list_pinjam_buku.php?return=" . $row["id_transaksi"] . "' onclick=\"return confirm('Konfirmasi?')\" class='btn btn-primary btn-sm'>Kembalikan Buku</a>";
-                            }
-                            echo "</td>";
-                            echo "</tr>";
-                            $counter++; // Menambah counter setiap kali loop
-                        }
-                    } else {
-                        // Menampilkan pesan jika tidak ada buku yang dipinjam
-                        echo "<tr><td colspan='6' class='text-center'>Belum ada buku yang dipinjam.</td></tr>";
-                    }
-                    ?>
-                </tbody>
-            </table>
+    <!-- Awal Tentang -->
+    <div class="px-4 pt-3 my-5 text-center">
+        <h1 class="display-4 fw-bold pb-3">Tentang Kami</h1>
+        <div class="col-lg-8 mx-auto text-justify">
+            <p class="lead mb-4">BluBooks adalah perpustakaan yang menghadirkan beragam koleksi buku untuk memenuhi
+                berbagai minat baca. Dari fiksi hingga nonfiksi, dari literatur klasik hingga karya terbaru, setiap buku
+                tersedia untuk memperkaya wawasan dan memperluas imajinasi. Dengan suasana yang nyaman dan sistem
+                peminjaman yang mudah, setiap pengunjung dapat menikmati pengalaman membaca yang menyenangkan.
+                Berkomitmen untuk mendukung budaya literasi, BluBooks juga menyediakan berbagai kegiatan seperti diskusi
+                buku, pelatihan menulis, serta klub baca yang dapat diikuti oleh siapa saja yang ingin berbagi dan
+                bertukar ide.</p>
         </div>
     </div>
+    <!-- Akhir Tentang -->
+
+    <!-- Awal konten -->
+    <div class="px-4 pt-3 my-5 pb-3 text-center">
+        <h1 class="display-4 fw-bold pb-3">Tim Kami</h1>
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/web-lib/resources/asset/images.jpg" class="card-img-top" alt="Foto Tim 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Aliffian Cahya</h5>
+                            <p class="card-text">Backend</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/web-lib/resources/asset/images.jpg" class="card-img-top" alt="Foto Tim 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Aria Zufar Shada</h5>
+                            <p class="card-text">Frontend</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir konten -->
 
     <!-- Awal footer -->
     <div class="container">
